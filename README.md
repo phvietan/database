@@ -1,15 +1,16 @@
-# @drstrain/database
+<img src="docs/logo.png" width="500px">
 
-<img src="docs/logo.png">
+<br>
+
+<img src="docs/cov.svg"> <img src="docs/vuln.svg">
 
 A fast, scalable in-memory for key-value database that support multiple features:
 
 - Zero dependency
-- Typescript supported
 - 100% test coverage
 - Security guaranteed
-- Easily embeddable inside
 - Has simple synchronous API
+- Supported namespace for your database
 
 # Install
 
@@ -28,6 +29,13 @@ Create a new Database instance.
 ```javascript
 const Database = require('@drstrain/database');
 const db = new Database();
+```
+
+Create a new Database instance with namespace supported. Database will be stored as `${name_space}_${key}`-value
+
+```javascript
+const Database = require('@drstrain/database');
+const db = new Database('session');
 ```
 
 Storing data to key.
@@ -50,6 +58,17 @@ const val = db.get('key');
 console.log(val);
 ```
 
+Clear database
+
+```javascript
+const val = db.clear();
+console.log(val);
+```
+
 # License
 
 Licensed under <a href="/LICENSE">MIT</a>
+
+# Thank you
+
+By using this product, thank you for your support!

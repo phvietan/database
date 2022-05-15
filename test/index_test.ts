@@ -20,4 +20,12 @@ describe('Test Database', () => {
     db.set('k', 'v');
     assert(db.get('k') === 'v');
   });
+
+  it('should successfully clear db', async () => {
+    const db = new Database('namespace');
+    db.set('k', 'v');
+    assert(db.get('k') === 'v');
+    db.clear();
+    assert(db.get('k') === undefined);
+  });
 });
