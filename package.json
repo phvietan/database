@@ -1,0 +1,42 @@
+{
+  "name": "@drstrain/database",
+  "version": "1.0.0",
+  "description": "Fast, scalable in-memory database",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:dev": "tsc --watch",
+    "build": "rm -rf ./dist/ && tsc && javascript-obfuscator ./dist/index.js --options-preset high-obfuscation --output ./dist/database.js && rm ./dist/index.js",
+    "lint": "eslint ./src/",
+    "test": "ts-mocha ./test/**/*_test.ts"
+  },
+  "keywords": [
+    "database",
+    "in-memory"
+  ],
+  "author": "@drstrain",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^17.0.33",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "javascript-obfuscator": "^4.0.0",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.6.4"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phvietan/database.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phvietan/database/issues"
+  },
+  "homepage": "https://github.com/phvietan/database#readme"
+}
