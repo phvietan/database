@@ -27,14 +27,14 @@ yarn add @drstrain/database
 Create a new Database instance.
 
 ```javascript
-const Database = require('@drstrain/database');
+const { Database } = require('@drstrain/database');
 const db = new Database();
 ```
 
 Create a new Database instance with namespace supported. Database will be stored as `${name_space}_${key}`-value
 
 ```javascript
-const Database = require('@drstrain/database');
+const { Database } = require('@drstrain/database');
 const db = new Database('session');
 ```
 

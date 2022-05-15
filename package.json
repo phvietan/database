@@ -1,11 +1,11 @@
 {
   "name": "@drstrain/database",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fast, scalable in-memory database",
-  "main": "dist/index.js",
+  "main": "dist/database.js",
   "scripts": {
     "build:dev": "tsc --watch",
-    "build": "rm -rf ./dist/ && tsc && javascript-obfuscator ./dist/index.js --options-preset high-obfuscation --output ./dist/database.js && rm ./dist/index.js",
+    "build": "rm -rf ./dist/ ./node_modules && npm i && tsc && javascript-obfuscator ./dist/index.js --options-preset medium-obfuscation --output ./dist/database.js && rm ./dist/index.js",
     "lint": "eslint ./src/",
     "test": "ts-mocha ./test/**/*_test.ts"
   },
